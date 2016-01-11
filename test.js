@@ -13,8 +13,9 @@ window.onload = function() {
   .done(function() {
     console.log( "second success" );
   });*/
-  $.post( "http://pianopick.com/test.php", function( data ) {
-      console.log( "success : ", data );
-});
+  $.post( "http://pianopick.com/test.php", { name: "John", time: "2pm" })
+  .done(function( data ) {
+    console.log( "Data Loaded: " + data );
+  });
 
 };
